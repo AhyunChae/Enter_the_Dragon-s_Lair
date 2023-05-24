@@ -97,7 +97,7 @@ void Player::HandleEvents() {
 				switch (SkillState)
 				{
 				case 1:
-					if (event.key.keysym.sym == SDLK_KP_6) {
+					if (event.key.keysym.sym == SDLK_d) {
 						onTile->r->onCharacter->GetDamaged(40);
 						SkillState = 0;
 					}
@@ -105,7 +105,7 @@ void Player::HandleEvents() {
 					break;
 				}
 			}
-			else if (event.key.keysym.sym == SDLK_KP_6) {
+			else if (event.key.keysym.sym == SDLK_w) {
 				if (onTile->r->onCharacter == NULL && onTile->r->IsWalkable) {//if there is no Character
 					trs->x += 1;
 					move(onTile, 6);
@@ -115,10 +115,10 @@ void Player::HandleEvents() {
 				}
 				gm->P_Turn = false;
 			}
-			else if (event.key.keysym.sym == SDLK_KP_5) {
+			else if (event.key.keysym.sym == SDLK_s) {
 				gm->P_Turn = false;
 			}
-			else if (event.key.keysym.sym == SDLK_KP_8) {
+			else if (event.key.keysym.sym == SDLK_w) {
 				if (onTile->u->onCharacter == NULL && onTile->u->IsWalkable) {//if there is no Character
 					trs->y -= 1;
 					move(onTile, 8);
@@ -128,7 +128,7 @@ void Player::HandleEvents() {
 				}
 				gm->P_Turn = false;
 			}
-			else if (event.key.keysym.sym == SDLK_KP_2) {
+			else if (event.key.keysym.sym == SDLK_x) {
 				if (onTile->d->onCharacter == NULL && onTile->d->IsWalkable) {
 					trs->y += 1;
 					move(onTile, 2);
@@ -138,7 +138,7 @@ void Player::HandleEvents() {
 				}
 				gm->P_Turn = false;
 			}
-			else if (event.key.keysym.sym == SDLK_KP_4) {
+			else if (event.key.keysym.sym == SDLK_a) {
 				if (onTile->l->onCharacter == NULL && onTile->l->IsWalkable) {
 					trs->x -= 1;
 					move(onTile, 4);
@@ -148,7 +148,7 @@ void Player::HandleEvents() {
 				}
 				gm->P_Turn = false;
 			}
-			else if (event.key.keysym.sym == SDLK_KP_1) {
+			else if (event.key.keysym.sym == SDLK_z) {
 				if (onTile->dl->onCharacter == NULL && onTile->dl->IsWalkable) {
 					trs->x -= 1;
 					trs->y += 1;
@@ -159,7 +159,7 @@ void Player::HandleEvents() {
 				}
 				gm->P_Turn = false;
 			}
-			else if (event.key.keysym.sym == SDLK_KP_3) {
+			else if (event.key.keysym.sym == SDLK_c) {
 				if (onTile->dr->onCharacter == NULL && onTile->dr->IsWalkable) {
 					trs->x += 1;
 					trs->y += 1;
@@ -170,7 +170,7 @@ void Player::HandleEvents() {
 				}
 				gm->P_Turn = false;
 			}
-			else if (event.key.keysym.sym == SDLK_KP_7) {
+			else if (event.key.keysym.sym == SDLK_q) {
 				if (onTile->ul->onCharacter == NULL && onTile->ul->IsWalkable) {
 					trs->x -= 1;
 					trs->y -= 1;
@@ -181,7 +181,7 @@ void Player::HandleEvents() {
 				}
 				gm->P_Turn = false;
 			}
-			else if (event.key.keysym.sym == SDLK_KP_9) {
+			else if (event.key.keysym.sym == SDLK_e) {
 				if (onTile->ur->onCharacter == NULL && onTile->ur->IsWalkable) {
 					trs->x += 1;
 					trs->y -= 1;
